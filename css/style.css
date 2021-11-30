@@ -6,36 +6,85 @@
 
 :root {
   --paddingY-big: 100px;
-  --paragrph-title-fs: 24px;
+  --h2-fs: 22px;
+  --h3-fs: 24px;
+  --h4-fs: 18px;
   --paragrph-title-mb: 20px;
-  --paragraph-mb: 30px;
+  --paragraph-mb: 32px;
   --paragraph-fs: 14px;
-  --section-pb: var(--paragraph-mb); 
+  --section-pb: var(--paragraph-mb);
+  --li-mb: 12px;
+  --ol-padding-left: 16px
 }
 
 h2 {
-  font-weight: 400;
-  color: rgb(49, 49, 49);
+  font-weight: 500;
+  color: rgb(105, 105, 105);
+  font-size: var(--h2-fs);
+  padding-bottom: 2px;
 }
 
 h3 {
-  font-size: var(--paragrph-title-fs);
+  font-size: var(--h3-fs);
+  margin-bottom: var(--paragrph-title-mb);
+  color: rgb(65, 64, 64);
+}
+h4 {
+  font-size: var(--h4-fs);
   margin-bottom: var(--paragrph-title-mb);
   color: rgb(65, 64, 64);
 }
 
-nav {
-  border-bottom: 1px solid lightgray;
+header {
   position: sticky;
+  top: 0;
   z-index: 999;
 }
 
-nav img {
-  width: 70px;
+nav {
+  border-bottom: 1px solid lightgray;
+  background-color: white;
 }
 
-main {
-  padding: var(--paddingY-big);
+nav img {
+  width: 75px;
+}
+
+ol {
+  padding-left: var(--ol-padding-left);
+}
+
+ol li {
+  margin-top: var(--li-mb);
+  padding-left: var(--ol-padding-left);
+}
+
+footer {
+  background-color: rgb(228, 227, 227);
+}
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer ul li {
+  display: inline-block;
+}
+footer ul li::before {
+  content: ".";
+  color: rgb(95, 95, 95);;
+  position: relative;
+  bottom: 2px;
+  padding-right: 5px;
+}
+footer ul li a {
+  text-decoration: none;
+  font-size: 11px;
+  color: rgb(95, 95, 95);
+}
+
+#select_lang {
+  padding-right: 100px;
 }
 
 .navLink {
@@ -46,7 +95,7 @@ main {
 .navLink a {
   display: inline-block;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: rgb(102, 102, 102);
   padding-bottom: 6px;
@@ -58,7 +107,11 @@ main {
 }
 
 .container {
-  max-width: 980px;
+  max-width: 1000px;
+}
+
+main .container {
+  padding-top: var(--paddingY-big);
 }
 
 .section {
@@ -68,8 +121,15 @@ main {
 .section p {
   font-size: var(--paragraph-fs);
   margin-bottom: var(--paragraph-mb);
+  line-height: 24px;
 }
 
 .section p a {
   text-decoration: none;
+}
+
+.ordered_list {
+  margin-bottom: var(--paragraph-mb);
+  font-size: var(--paragraph-fs);
+  line-height: 24px;
 }
