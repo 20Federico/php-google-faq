@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: 400;
+  color: rgb(49, 49, 49);
+}
+
+nav {
+  border-bottom: 1px solid lightgray;
+}
+
+nav img {
+  width: 70px;
+}
+
+.navLink {
+  display: inline-block;
+  padding-right: 40px;
+}
+
+.navLink a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+  padding-bottom: 6px;
+}
+
+.navLink_active a {
+  color: rgb(1, 111, 255);
+  border-bottom: 3px solid rgb(1, 111, 255);
+}
