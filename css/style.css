@@ -4,17 +4,38 @@
   box-sizing: border-box;
 }
 
+:root {
+  --paddingY-big: 100px;
+  --paragrph-title-fs: 24px;
+  --paragrph-title-mb: 20px;
+  --paragraph-mb: 30px;
+  --paragraph-fs: 14px;
+  --section-pb: var(--paragraph-mb); 
+}
+
 h2 {
   font-weight: 400;
   color: rgb(49, 49, 49);
 }
 
+h3 {
+  font-size: var(--paragrph-title-fs);
+  margin-bottom: var(--paragrph-title-mb);
+  color: rgb(65, 64, 64);
+}
+
 nav {
   border-bottom: 1px solid lightgray;
+  position: sticky;
+  z-index: 999;
 }
 
 nav img {
   width: 70px;
+}
+
+main {
+  padding: var(--paddingY-big);
 }
 
 .navLink {
@@ -34,4 +55,21 @@ nav img {
 .navLink_active a {
   color: rgb(1, 111, 255);
   border-bottom: 3px solid rgb(1, 111, 255);
+}
+
+.container {
+  max-width: 980px;
+}
+
+.section {
+  padding-bottom: var(--section-pb);
+}
+
+.section p {
+  font-size: var(--paragraph-fs);
+  margin-bottom: var(--paragraph-mb);
+}
+
+.section p a {
+  text-decoration: none;
 }
